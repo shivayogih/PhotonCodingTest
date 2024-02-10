@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/schoolListFragment">
+
+    <fragment
+        android:id="@+id/schoolDetailsFragment"
+        android:name="com.shcoading.photcodetest.ui.fragments.SchoolDetailsFragment"
+        android:label="fragment_school_details"
+        tools:layout="@layout/fragment_school_details">
+
+        <argument
+            android:name="school"
+            app:argType="string"
+          />
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/schoolListFragment"
+        android:name="com.shcoading.photcodetest.ui.fragments.SchoolListFragment"
+        android:label="fragment_school_list"
+        tools:layout="@layout/fragment_school_list">
+        <action
+            android:id="@+id/action_schoolListFragment_to_schoolDetailsFragment"
+            app:destination="@id/schoolDetailsFragment" />
+    </fragment>
+</navigation>
